@@ -3,7 +3,7 @@ set -e
 
 cp /usr/share/nginx/config.json /usr/share/nginx/html/config.json
 
-env_variables="WEBDAV_USERNAME WEBDAV_PASSWORD WEBDAV_NAME WEBDAV_HOSTNAME WEBDAV_FILE"
+env_variables="WEBDAV_NAME WEBDAV_HOSTNAME WEBDAV_FILE"
 for env_var in $env_variables
 do
     env_value=$(eval "echo \$$env_var")
@@ -25,7 +25,5 @@ sed -i "s/WEBDAV_SSL/$WEBDAV_SSL/g" /usr/share/nginx/html/config.json
 sed -i "s/(no-config)/config.json/g" /usr/share/nginx/html/index.html
 
 chown -R nginx:nginx /usr/share/nginx/html/webdav/
-# Set the password file used for nginx
-htpasswd -cbB /etc/nginx/htpasswd.webdav "$WEBDAV_USERNAME" "$WEBDAV_PASSWORD"
 
 exec "$@"
