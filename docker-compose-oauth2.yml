@@ -1,0 +1,31 @@
+version: "3"
+services:
+  keeweb:
+    build: app/
+    container_name: keeweb_webdav
+    volumes:
+      - keepass_store:/usr/share/nginx/html/webdav
+    environment:
+      - WEBDAV_USERNAME=webdavuser
+      - WEBDAV_PASSWORD=secret
+      - WEBDAV_NAME=KeePass Database
+      - WEBDAV_HOSTNAME=example.com
+      - WEBDAV_FILE=file.kdbx
+      - WEBDAV_SSL=true
+  
+  oauth2-proxy:
+    container_name: keeweb_oauth2-proxy
+    ports:
+      - "80:80"
+    image: quay.io/oauth2-proxy/oauth2-proxy
+    command:
+      - --http-address=0.0.0.0:80
+      - --upstream=http://keeweb_webdav/
+      - --email-domain=*
+      - --provider=azure
+      - --client-id=<application ID from step 3>
+      - --client-secret=<value from step 6>
+      - --cookie-secret=changemechangeme
+      - --cookie-secure=true
+volumes:
+  keepass_store:
