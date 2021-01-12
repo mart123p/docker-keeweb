@@ -19,9 +19,7 @@ Some variables must be set to use the container.
 | Variable        | Description           |
 | ------------- |-------------|
 | `WEBDAV_NAME` | Name of the KeePass Database. Will be shown in the KeeWeb interface |
-| `WEBDAV_HOSTNAME` | Hostname of the WebDAV server. Must be the same hostname that is used to access the KeeWeb application. If not some issues might arise with CORS.  |
 | `WEBDAV_FILE` | Filename of the KeePass Database. Example file.kdbx |
-| `WEBDAV_SSL` | (Optional) set to false if KeeWeb should be used over http without a reverse proxy. |
 
 
 ## Volume

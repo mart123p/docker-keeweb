@@ -4,7 +4,7 @@
     "files": [{
       "storage": "webdav",
       "name": "WEBDAV_NAME",
-      "path": "WEBDAV_SSL://WEBDAV_HOSTNAME/webdav/WEBDAV_FILE",
+      "path": "/webdav/WEBDAV_FILE",
       "options": { "user": "random_user", "password": "random_password" }
     }],
     "showOnlyFilesFromConfig": true

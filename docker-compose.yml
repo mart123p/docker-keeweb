@@ -9,8 +9,6 @@ services:
       - keepass_store:/usr/share/nginx/html/webdav
     environment:
       - WEBDAV_NAME=KeePass Database
-      - WEBDAV_HOSTNAME=localhost
       - WEBDAV_FILE=file.kdbx
-      - WEBDAV_SSL=false
 volumes:
   keepass_store:
