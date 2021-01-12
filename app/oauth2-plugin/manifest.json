@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "manifestVersion": "0.1.0",
+  "name": "oauth2-plugin",
+  "description": "Call the sign out URL of oauth2-proxy",
+  "author": {
+    "name": "Martin Pouliot",
+    "email": "mart123p",
+    "url": "https://github.com/mart123p/docker-keeweb"
+  },
+  "resources": {
+    "js": "EvGwpyzTRovPC401Sz/eW4nF3trKAy7lCVhOGOeP58MfVuze6/WkvJ8HY4dhTwAah4/kYLT6ajhIW2oGvFUB6QNjSIiMlf02JOq20Od/hHp4qzyKEzJ3wpIXkvfV58sdoh/Aqq0Z7xkBLocWwiEhXeUAdKz/l1PvUe09cVnW20DAQzwlxuGxbR//dVIV+5psI64dp0ipPklkQCx27VHMg4Xt+hZVSSW8QQ6esDE5WNKF9quFCkXVoRuzefD3MJ+ZOY8JpTMcimT3JEy+ZsOLhx0yIYE+pTXGJkAAIFlL6liC0+kXZsIZv+zHneOuYdwq1RJvPfyE36X74KRXCY3fbg=="
+  },
+  "desktop": false,
+  "license": "MIT",
+  "url": "/plugins/oauth2-plugin",
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkWH5BWEc0ib8eUINAHyab7MHgEK92brqc0gVamDvGS98ZFHGm9M7XypLA+Op8de6G9zN5zGTJkOUPt0el2YYKdQVMVEKhQVpvvusyFT+dE/1+JVhMvDGsJ0Xvghs70yNKlcbBBkxlFZ5vM1cUewYyL3n7O5jEd/aCq+QMIee593qKySFC2aQCcDreMta6xVTe+6qKz50m4ix+gsZbDbrebmn65TW1DLdMEwwzapPDuj++bOewiVgqSMcUN8BOuOuuMvf923WC/k1dpplbW1Vol29I3pNvXmL64FllUzRw5ZsuoofQO9umIIPNYj+RzcLhge6efcpDOJmx9A4PMp6QQIDAQAB"
+}

@@ -1,5 +1,10 @@
 {
     "settings":{
+      "canOpenDemo": false,
+      "dropbox": false,
+      "gdrive": false,
+      "onedrive": false,
+      "webdav": true
     },
     "files": [{
       "storage": "webdav",
@@ -7,5 +12,9 @@
       "path": "/webdav/WEBDAV_FILE",
       "options": { "user": "random_user", "password": "random_password" }
     }],
-    "showOnlyFilesFromConfig": true
+    "showOnlyFilesFromConfig": true,
+    "plugins":
+    [{
+      "url":"/plugins/oauth2-plugin/"
+    }]
   }

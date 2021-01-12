@@ -9,11 +9,18 @@ RUN mv keeweb-plugins/docs keeweb/plugins
 
 FROM nginx:1-alpine
 
-RUN apk add --no-cache apache2-utils
+RUN apk add --no-cache apache2-utils && \
+    mkdir /usr/share/nginx/html/app/ && \
+    mkdir -p /usr/share/nginx/html/plugins/oauth2-plugin
 
 COPY entrypoint.sh /
 COPY nginx.conf /etc/nginx/
-COPY --from=git /keeweb /usr/share/nginx/html/
+COPY --from=git /keeweb /usr/share/nginx/html/app/
+
+# Plugin
+COPY oauth2-plugin/manifest.json /usr/share/nginx/html/plugins/oauth2-plugin
+COPY oauth2-plugin/plugin.js /usr/share/nginx/html/plugins/oauth2-plugin
+
 COPY config.json    /usr/share/nginx/
 VOLUME /usr/share/nginx/html/webdav
 
