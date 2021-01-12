@@ -1,0 +1,11 @@
+{
+    "settings":{
+    },
+    "files": [{
+      "storage": "webdav",
+      "name": "WEBDAV_NAME",
+      "path": "WEBDAV_SSL://WEBDAV_HOSTNAME/webdav/WEBDAV_FILE",
+      "options": { "user": "WEBDAV_USERNAME", "password": "WEBDAV_PASSWORD" }
+    }],
+    "showOnlyFilesFromConfig": true
+  }

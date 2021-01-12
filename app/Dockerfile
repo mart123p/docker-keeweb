@@ -14,6 +14,8 @@ RUN apk add --no-cache apache2-utils
 COPY entrypoint.sh /
 COPY nginx.conf /etc/nginx/
 COPY --from=git /keeweb /usr/share/nginx/html/
+COPY config.json    /usr/share/nginx/
+VOLUME /usr/share/nginx/html/webdav
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]

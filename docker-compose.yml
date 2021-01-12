@@ -1,0 +1,18 @@
+version: "3"
+services:
+  keeweb:
+    build: app/
+    container_name: keeweb_webdav
+    ports:
+      - "80:80"
+    volumes:
+      - keepass_store:/usr/share/nginx/html/webdav
+    environment:
+      - WEBDAV_USERNAME=webdavuser
+      - WEBDAV_PASSWORD=secret
+      - WEBDAV_NAME=KeePass Database
+      - WEBDAV_HOSTNAME=localhost
+      - WEBDAV_FILE=file.kdbx
+      - WEBDAV_SSL=false
+volumes:
+  keepass_store:
